@@ -1,7 +1,7 @@
 
 class GDriveUpload:
 
-    def __init__(self):
+    def __init__(self, file):
         pass
 
     def upload(self, file_path):
@@ -10,4 +10,4 @@ class GDriveUpload:
     def share(self, file_id):
         pass
 
-    def 
+    def .url
