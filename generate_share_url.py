@@ -6,6 +6,9 @@ API_VERSION = 'v3'
 SCOPES = ['https://www.googleapis.com/auth/drive']
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+# print('============================================================')
+# print(type(service))
+# print('============================================================')
 
 file_id = '143pxSPZSI5N5OmRScyuDYdzfaW4vFDZz'
 
@@ -20,6 +23,9 @@ response_permission = service.permissions().create(
 ).execute()
 
 print(response_permission)
+# print('============================================================')
+# print(type(response_permission))
+# print('============================================================')
 
 """
 {'kind': 'drive#permission', 'id': 'anyoneWithLink',
