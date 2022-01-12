@@ -30,13 +30,19 @@ while nextPageToken:
     # get the token for the next page of results so that is there is one, repeat the process as long as there is a nextPageToken
     nextPageToken = response.get('nextPageToken')
 
-# present the results as a pandas dataframe
+# present the results as a pandas dataframe, and styling the dataframe before printing the data
+pd.set_option('display.max_columns', 100)
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.min_rows', 500)
+pd.set_option('display.max_colwidth', 150)
+pd.set_option('display.width', 200)
+pd.set_option('expand_frame_repr', True)
 df = pd.DataFrame(files)
 print(df)
-print(type(df))
 
-print(files)
 print(type(files))
+print(len(files))
+print(files)
 
 for file in files:
     print(f"https://drive.google.com/file/d/{file['id']}/view")
